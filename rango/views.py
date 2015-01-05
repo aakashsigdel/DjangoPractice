@@ -6,9 +6,5 @@ def index(request):
 	return render(request, 'rango/index.html', context_dict)
 
 def about(request):
-	html = """
-				Rango Says Here is the about page!
-				<br>
-				<a href="/rango/">Home Page</a>
-			"""
-	return HttpResponse(html)
+	context_dict = {'funtext' : 'This is very funny to check out'}
+	return render(request, 'rango/about.html', context_dict)
